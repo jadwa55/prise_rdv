@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+.baniere{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #0676d1), url(./public/img/Banniere.jpg) center/cover no-repeat;
+    height: 100vh;
+}
+
+.logo img{
+    width: 180px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+
+.baniere-text{
+    text-align: center;
+    color: #fff;
+    padding-top: 300px;
+}
+
+.baniere-text h1{
+    font-size: 130px;
+    font-family: 'Lobster', cursive;
+}
+
+.baniere-text p{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.baniere_btn{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 85%;
+}
+
+.baniere_btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: 1px solid #fff;
+    position: relative;
+    z-index: 1;
+    transition: color 0.6s ease-in;
+}
+
+.baniere_btn a span{
+    width: 0;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.6s ease-in;
+}
+
+
+.baniere_btn a:hover span{
+    width: 100%;
+}
+
+.baniere_btn a:hover{
+    color: #000;
+}
+
+.sidebar{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background: #0676d1;
+    z-index: 2;
+    transition: 0.6s ease-in;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 20px 20px;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-menu{
+    width: 50px;
+    height: 50px;
+    background: #0676d1;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    border-radius: 10px;
+    z-index: 3;
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    justify-content: center;
+    line-height: 50px;
+    transition: 0.6s ease-in;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 770px) {
+    .baniere-text h1{
+        font-size: 44px;
+    }
+
+    .baniere_btn a{
+       display: block;
+       margin: 20px auto;
+    }
+
+.baniere{
+
+    height: 80vh;
+}
+}
+
+.mission{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.titre-text{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.titre-text p{
+    margin: auto;
+    font-size: 20px;
+    color: #0676d1;
+    font-weight: bold;
+    opacity: 0.5;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.titre-text p::after{
+    content: '';
+    background: linear-gradient(#0676d1, #fff);
+    height: 40px;
+    width: 60px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(-10deg);
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+
+.titre-text h1{
+    font-size: 50px;
+}
+
+.mission_boite{
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.missions{
+    flex-basis: 50%;
+}
+
+.im-mission{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #0676d1), url(./image/Banniere2.jpg) center/cover no-repeat;
+    height: 630px;
+    flex-basis: 35%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.missions h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #0676d1;
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.mission_icon .fas{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #0676d1;
+    border: 1px solid #0676d1;
+}
+
+.mission-text p{
+    text-align: initial;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 770px){
+
+    .titre-text h1{
+    font-size: 35px;
+     }
+
+     .missions{
+        flex-basis: 100%;
+    }
+
+    .im-mission{
+        flex-basis: 100%;
+    }
+}
+
+.service{
+    width: 100%;
+    padding: 35px 0;
+    background: lightgray;;
+}
+
+.service_boite{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.service_unique{
+    flex-basis: 48%;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    position: relative;
+    color: #fff;
+}
+
+.service_unique img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.text_sur{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #0676d1);
+    opacity: 0;
+    transition: 0.6s ease-in;
+}
+
+.service_unique:hover .text_sur{
+    opacity: 1;
+}
+
+.descrip{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    transition: 0.6s ease-in;
+    opacity: 0;
+}
+
+.descrip p{
+    font-size: 14px;
+}
+
+.service_unique:hover .descrip{
+    opacity: 1;
+    bottom: 40%;
+}
+
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+@media screen and (max-width: 770px){
+
+.service_unique{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+
+}
+
+.descrip p{
+    font-size: 12px;
+}
+
+
+hr{
+    margin: 5px auto;
+
+}
+
+.service_unique:hover .descrip{
+    bottom: 25%;
+}
+
+}
+
+.temoignge{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.temoignagee-boite{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.temoignage-simple{
+    flex-basis: 30%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 3px #0676d1;
+    cursor: pointer;
+    transition: 0.6s ease-in;
+    padding: 20px;
+}
+
+.temoignagee-boite p{
+    font-size: 14px;
+}
+
+.utilisateur{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.utilisateur img{
+    width: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.info_util .fab{
+    margin: 2px;
+    font-size: 20px;
+    padding-top:10px ;
+    color: #0676d1;
+}
+
+.temoignage-simple:hover{
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 770px){
+    .temoignage-simple{
+        flex-basis: 100%;
+
+    }
+
+
+.temoignagee-boite p{
+    font-size: 12px;
+}
+
+.info_util h4{
+    font-size: 12px;
+}
+.info_util .fab{
+    font-size: 16px;
+}
+
+
+}
+
+.Contact{
+    padding: 100px 0 20px;
+    background: #efebc2;
+    position: relative;
+}
+
+.pied-page{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.pied-g, .pied-d{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.pied-d{
+    text-align: right;
+}
+
+.pied-page h1{
+    margin: 10px 0;
+}
+
+.pied-g .far{
+    margin-right: 10px;
+    font-size: 20px;
+    color: #0676d1;
+}
+
+.pied-d .far, .pied-d .fas{
+    margin-left: 10px;
+    font-size: 20px;
+    color: #0676d1;
+}
+
+.img-footer{
+    max-width: 470px;
+    opacity: 0.2;
+    position: absolute;
+    left: 55%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    transition: 0.6s ease-in;
+}
+
+.img-footer:hover{
+    transform: translate(-50%);
+}
+
+.reseaux-sociaux{
+    text-align: center;
+}
+
+.reseaux-sociaux .fab{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid #0676d1;
+    cursor: pointer;
+    transition: 0.6s ease-in;
+    color: #0676d1
+}
+
+.reseaux-sociaux .fab:hover{
+    background: #0676d1;
+    color: #fff;
+    transform: translateY(-10px);
+}
+
+.reseaux-sociaux p{
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 770px){
+    .pied-g, .pied-d{
+        flex-basis: 100%;
+      align-items: center;
+    }
+
+
+    .pied-g{
+        text-align: initial;
+    }
+
+    .pied-d{
+        text-align: start;
+    }
+
+    .img-footer{
+        max-width: 300px;
+    }
+}
