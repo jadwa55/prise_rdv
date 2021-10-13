@@ -24,10 +24,10 @@
                 <li><a href=""><span class="las la-users"></span>
                     <span>Profitionnel</span></a>
                 </li>
-                <li><a href="{{ route('specialites.index') }}" ><span class="las la-clipboard-list"></span>
+                <li><a href="{{ route('specialites.index') }}"class="active"><span class="las la-clipboard-list"></span>
                     <span>Specialite</span></a>
                 </li>
-                <li><a href="{{ route('categories.index') }}"class="active"><span class="las la-clipboard-list"></span>
+                <li><a href="{{ route('categories.index') }}"><span class="las la-clipboard-list"></span>
                     <span>Categories</span></a>
                 </li>
             </ul>
@@ -57,10 +57,10 @@
                 <div class="project" style="margin-top: 30px">
                     <div class="card">
                         <div class="card-header">
-                            <h2>Recent categories</h2>
+                            <h2>Recent specialites</h2>
 
-                            <button><a class="btn btn-success" href="{{ route('categories.create') }}" title="Create a category"> <i class="fas fa-plus-circle"></i>
-                            </span>Add new category</a></button>
+                            <button><a class="btn btn-success" href="{{ route('specialites.create') }}" title="Create a specialite"> <i class="fas fa-plus-circle"></i>
+                            </span>Add new specialite</a></button>
                         </div>
 
 
@@ -76,7 +76,7 @@
                                     <thead>
                                         <tr>
                                             <td>ID</td>
-                                            <td>categorie name</td>
+                                            <td>specialite name</td>
                                             <td>Image</td>
                                             <td>Description</td>
                                             <td>Date Created</td>
@@ -84,15 +84,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($categories as $category)
+                                        @foreach ($specialites as $specialite)
                                         <tr>
-                                            <td>{{ $category->id}}</td>
-                                            <td>{{ $category->name}}</td>
-                                            <td><img width="20%"  src="{{ asset($category->image)}}"></td>
-                                            <td>{{ $category->des}}</td>
+                                            <td>{{ $specialite->id}}</td>
+                                            <td>{{ $specialite->name_s}}</td>
+                                            <td>{{ $specialite->category_id}}</td>
                                             <td>{{ date_format($category->created_at, 'jS M Y') }}</td>
                                             <td>
-                                                <form action="{{ route('categories.destroy', $category->id) }}" method="POST">
+                                                <form action="{{ route('specialites.destroy', $category->id) }}" method="POST">
 
                                                     {{-- <a href="{{ route('categorys.show', $category->id) }}" title="show">
                                                         <i class="fas fa-eye text-success  fa-lg"></i>

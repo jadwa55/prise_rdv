@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 Use App\Http\Controllers\ViewController;
 use App\Http\Controllers\CategoriesController;
-
+use App\Http\Controllers\SpecialiteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,5 +19,8 @@ use App\Http\Controllers\CategoriesController;
 //     return view('welcome');
 // });
 Route::get('/', [ViewController::class, 'index'])->name('home');
+
+
+Route::resource('specialites', SpecialiteController::class);
 
 Route::resource('categories', CategoriesController::class);
