@@ -77,8 +77,7 @@
                                         <tr>
                                             <td>ID</td>
                                             <td>specialite name</td>
-                                            <td>Image</td>
-                                            <td>Description</td>
+                                            <td>Category</td>
                                             <td>Date Created</td>
                                             <td width="280px">Action</td>
                                         </tr>
@@ -89,15 +88,11 @@
                                             <td>{{ $specialite->id}}</td>
                                             <td>{{ $specialite->name_s}}</td>
                                             <td>{{ $specialite->category_id}}</td>
-                                            <td>{{ date_format($category->created_at, 'jS M Y') }}</td>
+                                            <td>{{ date_format($specialite->created_at, 'jS M Y') }}</td>
                                             <td>
-                                                <form action="{{ route('specialites.destroy', $category->id) }}" method="POST">
+                                                <form action="{{ route('specialites.destroy', $specialite->id) }}" method="POST">
 
-                                                    {{-- <a href="{{ route('categorys.show', $category->id) }}" title="show">
-                                                        <i class="fas fa-eye text-success  fa-lg"></i>
-                                                    </a> --}}
-
-                                                    <a href="{{ route('categories.edit', $category->id) }}">
+                                                    <a href="{{ route('specialites.edit', $specialite->id) }}">
                                                         <i class="fas fa-edit  fa-lg"></i>
 
                                                     </a>

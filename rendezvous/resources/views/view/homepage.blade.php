@@ -97,6 +97,7 @@
         <div class="service_boite">
             @foreach ($categories as $category)
             <div class="service_unique">
+                <a href="{{ url('view-category/'.$category->name) }}">
                 <img src="{{ asset($category->image)}}" alt="">
                 <div class="text_sur">
                     <div class="descrip">
@@ -105,7 +106,9 @@
                         <p>{{ $category->des }}</p>
                     </div>
                 </div>
+            </a>
             </div>
+
             @endforeach
         </div>
 

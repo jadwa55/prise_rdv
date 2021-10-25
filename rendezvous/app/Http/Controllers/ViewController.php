@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\View;
 use App\Models\Categories;
+use App\Models\Specialite;
 use Illuminate\Http\Request;
 
 class ViewController extends Controller
@@ -22,6 +23,18 @@ class ViewController extends Controller
         return view('view.homepage',[
             'categories' => $categories,
         ]);
+    }
+
+
+    public function viewcategory($name)
+    {
+        if(Categories::where('name',$name)->exists());
+        {
+            $categories  = Categories::where('name', $name)->first();
+            $specialites = Specialite::where('category_id', $categories->id)->get();
+            return view('view.specialite', compact('categories','specialites'));
+
+        }
     }
 
     /**

@@ -19,6 +19,7 @@ use App\Http\Controllers\SpecialiteController;
 //     return view('welcome');
 // });
 Route::get('/', [ViewController::class, 'index'])->name('home');
+Route::get('view-category/{name}',[ViewController::class,'viewcategory']);
 
 
 Route::resource('specialites', SpecialiteController::class);
