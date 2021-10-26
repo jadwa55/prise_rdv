@@ -1,0 +1,80 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    margin-right: 25px;
+}
+
+.header {
+    background:#DDB892 ;
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+    background-size: cover;
+}
+.header .row {
+    margin-top: 70px;
+}
+
+.title{
+    margin:10px;
+    color: #555;
+}
+.account-page{
+    margin: 5%;
+    margin-left: 20%;
+}
+
+.card-body{
+    position: relative;
+    border: none;
+    box-shadow: rgb(165, 165, 165) 0px 8px 16px;
+    border-radius: 5px;
+    width: 90%;
+    background: url(img/newbg.jpg);
+}
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+form{
+    padding:5%;
+    justify-content: space-between;
+}
+
+.form-group{
+    padding: 2%;
+}
+
+.btn{
+    display: inline-block;
+    background: #DDB892 ;
+    padding: 4px 11px;
+    border-radius: 30px;
+    transition: background 0.5s;
+    margin-left: 5%;
+}

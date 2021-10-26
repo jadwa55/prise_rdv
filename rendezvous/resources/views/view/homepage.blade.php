@@ -20,6 +20,22 @@
         <div class="baniere_btn">
             <a href="#service"> <span></span> Prise un rendez-vous</a>
             <!-- <a href="#"> <span></span> Savoir Plus</a> -->
+            @auth
+                <a class="dropdown-item" href="#.">
+                    <form method="post" action="{{route('logout')}}"  onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    @csrf
+                        <i class="mr-50" data-feather="power"></i> Logout
+                    </form>
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            @endauth
+
+            @guest
+                <a href="{{ route('is_login') }}">Login/Register</a>
+            @endguest
         </div>
     </section>
 

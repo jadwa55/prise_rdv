@@ -6,6 +6,7 @@ use App\Models\View;
 use App\Models\Categories;
 use App\Models\Specialite;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ViewController extends Controller
 {
@@ -35,6 +36,20 @@ class ViewController extends Controller
             return view('view.specialite', compact('categories','specialites'));
 
         }
+    }
+
+
+    public function isLogin(){
+
+        // ===check valeur nd type
+        // == check only valeur
+
+        if(Auth::user()->is_login===1){
+            return redirect(route('categories'));
+        }
+
+        return redirect(route('home'));
+
     }
 
     /**

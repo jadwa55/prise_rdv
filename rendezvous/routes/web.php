@@ -19,9 +19,13 @@ use App\Http\Controllers\SpecialiteController;
 //     return view('welcome');
 // });
 Route::get('/', [ViewController::class, 'index'])->name('home');
+
 Route::get('view-category/{name}',[ViewController::class,'viewcategory']);
 
 
 Route::resource('specialites', SpecialiteController::class);
 
 Route::resource('categories', CategoriesController::class);
+
+
+Route::get('is_login',[ViewController::class,'isLogin'])->name('is_login')->middleware('auth');
